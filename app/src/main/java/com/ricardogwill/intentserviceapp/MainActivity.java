@@ -12,12 +12,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
+    // This method is called by the onClick XML attribute.
     public void startTheService(View view) {
         Intent startServiceIntent = new Intent(this, MyService.class);
         startService(startServiceIntent);
     }
-
+    // This method is called by the onClick XML attribute.
     public void stopTheService(View view) {
         Intent stopServiceIntent = new Intent(this, MyService.class);
         stopService(stopServiceIntent);

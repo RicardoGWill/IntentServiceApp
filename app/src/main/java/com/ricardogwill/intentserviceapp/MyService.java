@@ -17,7 +17,8 @@ public class MyService extends IntentService {
     public MyService() {
         super("my_intent_thread");
     }
-
+    // Necessary addition.  This is what the Service does.
+    // Use “Alt + Enter” after writing the class name.
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
         synchronized (this) {
@@ -28,13 +29,13 @@ public class MyService extends IntentService {
             }
         }
     }
-
+    // Use “Ctrl + O” to find this overridden method.
     @Override
     public int onStartCommand(@Nullable Intent intent, int flags, int startId) {
         Toast.makeText(this, "Service Started.", Toast.LENGTH_SHORT).show();
         return super.onStartCommand(intent, flags, startId);
     }
-
+    // Use “Ctrl + O” to find this overridden method.
     @Override
     public void onDestroy() {
         Toast.makeText(this, "Service Destroyed.", Toast.LENGTH_SHORT).show();
